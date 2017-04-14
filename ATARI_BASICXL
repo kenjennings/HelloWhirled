@@ -1,5 +1,8 @@
 10 Rem OSS BASIC XL on Atari
-20 Rem Save text as "HELLO.BXL" and on
-30 Rem the Atari ENTER "HELLO.BXL".
-40 Rem Emulators with "H:" device are great for this. 
-50 Print "Hello Whirled!"
+20 Rem Note keywords are mixed case.
+30 Rem Save text as "HELLO.BXL" and on
+40 Rem the Atari Enter the file.
+50 Rem Emulators with "H:" device are great for this. 
+60 Rem Enter "D:HELLO.BXL" or Enter "H:HELLO.BXL"
+70 Rem 
+80 Print "Hello Whirled!"
