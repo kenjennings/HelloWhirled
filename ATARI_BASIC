@@ -1,0 +1,8 @@
+10 REM Regular Atari BASIC on Atari
+20 REM Note keywords are all CAPs.
+30 REM Save text as "HELLO.BAS" and on
+40 REM the Atari ENTER the file. 
+50 REM Emulators with "H:" device are great for this.
+60 REM ENTER "D:HELLO.BAS" or ENTER "H:HELLO.BAS"
+70 REM
+80 PRINT "Hello Whirled!"
