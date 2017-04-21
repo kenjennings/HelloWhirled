@@ -1,3 +1,3 @@
 # HelloWhirled
-Tutorial Hello World
-Editing text here, because the tutorial tells me to.
+Various kinds of Hello Whirled!
+Some common, others on platforms and languages that are not familiar to most.
