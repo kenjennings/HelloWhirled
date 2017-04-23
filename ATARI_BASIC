@@ -5,4 +5,4 @@
 50 REM Emulators with "H:" device are great for this.
 60 REM ENTER "D:HELLO.BAS" or ENTER "H:HELLO.BAS"
 70 REM
-80 PRINT "Hello Whirled!"
+80 PRINT "Hello, Whirled!"
