@@ -5,4 +5,4 @@
 50 Rem Emulators with "H:" device are great for this. 
 60 Rem Enter "D:HELLO.BXL" or Enter "H:HELLO.BXL"
 70 Rem 
-80 Print "Hello Whirled!"
+80 Print "Hello, Whirled!"
