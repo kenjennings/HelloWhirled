@@ -50,7 +50,7 @@ HELLO_WHIRLED
 ; --------------------------------------------------------------------
 ; Store the program start location in the Atari DOS RUN Address.
 ; When DOS is done loading the executable it will automatically
-; jump to the address placed hre in DOS_RUN_ADDR.
+; jump to the address placed here in DOS_RUN_ADDR.
 
 	*=DOS_RUN_ADDR
 	.word PRG_START
