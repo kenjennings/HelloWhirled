@@ -7,5 +7,5 @@
 70 Rem 
 80 Graphics 18 : Rem Mode 2 + 16 for no text window
 90 Position 0,0
-100 Print #6;"Hello Whirled!"
+100 Print #6;"Hello, Whirled!"
 110 Goto 110 : Rem Press BREAK to end
