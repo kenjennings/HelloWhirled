@@ -36,16 +36,16 @@ Copy_Text_To_Screen
 	lda HELLO_WHIRLED,y           ; Read from the data
 	cmp #$9B                      ; Is this the end of string?
 	beq Do_While_More_Electricity ; Yes, go to end of program.
-	sta (SAVMSC),y                ; Write byte to scrteen memory.
+	sta (SAVMSC),y                ; Write byte to screen memory.
 	iny                           ; Increment index to string and screen.
 	bne Copy_Text_To_Screen       ; Do the next character.
 
-Do_While_More_Electricity         ; Infinite loop, otherwise the
+Do_While_More_Electricity             ; Infinite loop, otherwise the
 	jmp Do_While_More_Electricity ; program returns to DOS immediately.
 		
 HELLO_WHIRLED
 	.sbyte "Hello, Whirled!"      ; .sbyte is internal Atari format
-	.byte $9b
+	.byte $9b                     ; Atari EOL character.
 	
 ; --------------------------------------------------------------------
 ; Store the program start location in the Atari DOS RUN Address.
