@@ -1,8 +1,8 @@
 # HelloWhirled
 
-Various kinds of "Hello, Whirled!".  (Close relative of the more advanced "Visualize Whirled Peas!" application.)
+Since I had to create a "hello world" repository as part of the initial tutorial, I decided to continue and provide its pitiful existence some sort of purpose.
 
-Some examples common, others on platforms and languages that may not be familiar to most.
+Here you will find various kinds of "Hello, Whirled!" programs. (This is a close relative of the more advanced "Visualize Whirled Peas!" application.)
 
 
 [![HelloWhirled](https://github.com/kenjennings/HelloWhirled/blob/master/HelloWhirled.png)](#features)
