@@ -15,6 +15,8 @@ ATARI_ATASM_CIO_PUTBYTES -- 6502 Assembly for atasm.  Uses the OS Central I/O to
 
 ATARI_ATASM_DIRECTWRITE -- 6502 Assembly for atasm.  Uses (abuses) the OS Page 0 Pointer to the screen to write directly into screen memory.
 
+ATARI_ATASM_DISPLAYLIST -- 6502 Assembly for atasm.  Abuses the Atari's load file format to replace the display list LMS address operand's value with the address of the "Hello, Whirled" string.  Technically, there is no actual code executing to do this. 
+
 ATARI_BASIC -- Ye old, standard Atari BASIC using "PRINT". 
 
 ATARI_BASICXL -- OSS BASIC XL on Atari using "Print".  Note the pretty, mixed-case keywords. It really is an improvement.
