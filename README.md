@@ -11,7 +11,9 @@ Here you will find various kinds of "Hello, Whirled!" programs. (This is a close
 The excitement is overwhelming.
 
 
-ATARI_ATASM_CIO_PUTBYTES -- 6502 Assembly for atasm.  Uses the OS Central I/O to write the string to the screen (E: device.)
+ATARI_ATASM_CIO_PUTBYTES -- 6502 Assembly for atasm.  Uses the official, legally sanctioned I/O method.  It uses the OS Central I/O to write the string to the screen (E: device.)
+
+ATARI_ATASM_CIO_PUTCHEAT -- 6502 Assembly for atasm.  Uses the OS Central I/O to write the characters to the screen (E: device.)  It does this using the PUT CHAR vector provided in the IOCB channel.  The cuts down the amount of IOCB setup the code does, but changes the model to a less efficient iteration printing individual characters.
 
 ATARI_ATASM_DIRECTWRITE -- 6502 Assembly for atasm.  Uses (abuses) the OS Page 0 Pointer to the screen to write directly into screen memory.
 
