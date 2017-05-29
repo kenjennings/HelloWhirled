@@ -18,11 +18,13 @@
 ; load the address of the Hello, Whirled! string directly to 
 ; the LMS instruction's address operand.
 ; 
+; --------------------------------------------------------------------
 ; $BC20 is the starting address of the display list when 
 ; there is 48K or more of memory and NO CARTRIDGE loaded.
 ; The mode instruction is at the base display list address
 ; plus 3 bytes.  The LMS address operand is the word that
 ; follows at display list base plus 4.
+; --------------------------------------------------------------------
 ;
 DISPLAY_LIST=$BC20
 
