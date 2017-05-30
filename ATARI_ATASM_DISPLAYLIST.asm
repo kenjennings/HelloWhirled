@@ -24,9 +24,9 @@
 ; The mode instruction is at the base display list address
 ; plus 3 bytes.  The LMS address operand is the word that
 ; follows at display list base plus 4.
-; --------------------------------------------------------------------
 ;
 DISPLAY_LIST=$BC20
+; --------------------------------------------------------------------
 
 LOMEM_DOS_DUP = $3308 ; First usable memory after DOS and DUP 
 
@@ -36,25 +36,34 @@ DOS_RUN_ADDR =  $02e0 ; Execute at address stored here when file loading complet
 
 	*=LOMEM_DOS_DUP ; Start program at first usable memory after DOS and DUP 
 
+; --------------------------------------------------------------------
+; Yup, that's all the "program" there is. 3 bytes of JMP
+
 PRG_START
 
 Do_While_More_Electricity         ; Infinite loop, otherwise the
 	jmp Do_While_More_Electricity ; program returns to DOS immediately.
-; Yup, that's all the "program" there is. 3 bytes of JMP
+	
+; --------------------------------------------------------------------
+; The data.  "Hello, Whirled!" text.
 
 HELLO_WHIRLED
 	.sbyte "Hello, Whirled!"      ; .sbyte is internal Atari format
 
-; Therefore: Set program "location" to the display list LMS address operand. 
+; --------------------------------------------------------------------
+; Create the display.   
+; Set load address to the display list LMS address operand and store
+; the address of the HELLO_WHIRLED text.
+ 
 	*=[DISPLAY_LIST+4] 
  	.word HELLO_WHIRLED ; And store the address of the string.
+	
 ; and that's it.  Hello, Whirled! with no code.
-
 
 ; --------------------------------------------------------------------
 ; Store the program start location in the Atari DOS RUN Address.
-; When DOS is done loading the executable it will automatically
-; jump to the address placed here in DOS_RUN_ADDR.
+; When DOS is done loading the executable file into memory it will 
+; automatically jump to the address placed here in DOS_RUN_ADDR.
 
 	*=DOS_RUN_ADDR
 	.word PRG_START
