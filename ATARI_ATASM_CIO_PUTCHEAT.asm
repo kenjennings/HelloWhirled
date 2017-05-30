@@ -3,7 +3,7 @@
 ; Built with eclipse/wudsn/atasm.
 ;
 ; "Hello, Whirled!" displayed in screen via CIO by abusing the
-; the IOCB's putchar vector which is really intended for BASIC.
+; the IOCB's PUT CHAR vector which is really intended for BASIC.
 ; This cheat allows bypassing most knowledge of IOCB in the code.
 ; --------------------------------------------------------------------
 ;
@@ -11,12 +11,12 @@
 ;
 IOCB = $0340     ; Base IO Control Block, Channel 0, E: by default
 ;
-ICPTL = IOCB+$06 ; Put char routine (low)
-ICPTH = IOCB+$07 ; Put char routine (high)
+ICPTL = IOCB+$06 ; PUT CHAR routine (low)
+ICPTH = IOCB+$07 ; PUT CHAR routine (high)
 ;
 ; Borrow a page 0 location that isn't used by BASIC or the OS for 
-; the purposes of this program.  Need to preserve Y register, 
-; because the PutCH will change all the registers.
+; the purposes of this program.  Need to preserve the Y register, 
+; because the PUT CHAR will change all the registers.
 FR0 =    $D4 ; float.  Floating point register and USR return value to BASIC.
 
 ; --------------------------------------------------------------------
