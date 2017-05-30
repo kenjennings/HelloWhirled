@@ -26,7 +26,7 @@ DOS_RUN_ADDR =  $02e0 ; Execute at address stored here when file loading complet
 	*=LOMEM_DOS_DUP ; Start program at first usable memory after DOS and DUP 
 
 ; --------------------------------------------------------------------
-; Yup, that's all the "program" there is. 3 bytes of JMP
+; Yup, this is all the "program" there is. 3 bytes of JMP
 
 PRG_START
 
