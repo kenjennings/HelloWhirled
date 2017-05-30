@@ -9,7 +9,7 @@
 ;
 CIOV = $E456        ; CIO Vector
 ;
-CIO_PUT_BYTES = $0B ; Command byte to write bytes
+CIO_PUT_BYTES = $0B ; Command to write bytes
 ;
 IOCB = $0340        ; Base IO Control Block, Channel 0, E: by default
 ;
