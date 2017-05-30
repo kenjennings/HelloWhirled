@@ -71,17 +71,17 @@ HELLO_WHIRLED
 PutCH
 	sta OUTPUT ; Self modifying code - save the byte below.
 
-	lda ICPTH ; High byte for Put Char in E:/IOCB Channel 0.
+	lda ICPTH ; High byte for PUT CHAR in E:/IOCB Channel 0.
 	pha       ; Push to stack
 
-	lda ICPTL ; Low byte for Put Char in E:/IOCB Channel 0.
+	lda ICPTL ; Low byte for PUT CHAR in E:/IOCB Channel 0.
 	pha       ; Push to stack
 
 OUTPUT = *+1
 	lda #$00 ; Modified at routine entry.
 
-	; This rts actually triggers calling the address of PutCH
-	; that was pushed onto the stack above. 
+	; This rts actually triggers calling the address of the E:
+	; device PUT CHAR routine pushed onto the stack above. 
 	rts  
 
 	
