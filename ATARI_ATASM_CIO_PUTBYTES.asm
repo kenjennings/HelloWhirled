@@ -9,7 +9,7 @@
 ;
 CIOV = $E456        ; CIO Vector
 ;
-CIO_PUT_BYTES = $0B ; Command to write bytes
+CIO_PUT_BYTES = $0B ; Command byte to write bytes
 ;
 IOCB = $0340        ; Base IO Control Block, Channel 0, E: by default
 ;
@@ -58,7 +58,7 @@ PRG_START
 	jsr CIOV ; Engage, Mr Crusher.
 
 	; FYI: On return from CIOV the CPU N flag is set if there was 
-	; an error and the error code is in Y register.  But we don't
+    ; an error and the error code is in Y register.  But we don't
 	; care for the simple purposes of Hello, Whirled!
 
 Do_While_More_Electricity         ; Infinite loop, otherwise the
