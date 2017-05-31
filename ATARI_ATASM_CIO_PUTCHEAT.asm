@@ -3,7 +3,7 @@
 ; Built with eclipse/wudsn/atasm.
 ;
 ; "Hello, Whirled!" displayed in screen via CIO by abusing the
-; the IOCB's PUT CHAR vector which is really intended for BASIC.
+; the IOCB's putchar vector which is really intended for BASIC.
 ; This cheat allows bypassing most knowledge of IOCB in the code.
 ; --------------------------------------------------------------------
 ;
@@ -11,12 +11,12 @@
 ;
 IOCB = $0340     ; Base IO Control Block, Channel 0, E: by default
 ;
-ICPTL = IOCB+$06 ; PUT CHAR routine (low)
-ICPTH = IOCB+$07 ; PUT CHAR routine (high)
+ICPTL = IOCB+$06 ; Put char routine (low)
+ICPTH = IOCB+$07 ; Put char routine (high)
 ;
 ; Borrow a page 0 location that isn't used by BASIC or the OS for 
-; the purposes of this program.  Need to preserve the Y register, 
-; because the PUT CHAR will change all the registers.
+; the purposes of this program.  Need to preserve Y register, 
+; because the PutCH will change all the registers.
 FR0 =    $D4 ; float.  Floating point register and USR return value to BASIC.
 
 ; --------------------------------------------------------------------
@@ -71,17 +71,17 @@ HELLO_WHIRLED
 PutCH
 	sta OUTPUT ; Self modifying code - save the byte below.
 
-	lda ICPTH ; High byte for PUT CHAR in E:/IOCB Channel 0.
+	lda ICPTH ; High byte for Put Char in E:/IOCB Channel 0.
 	pha       ; Push to stack
 
-	lda ICPTL ; Low byte for PUT CHAR in E:/IOCB Channel 0.
+	lda ICPTL ; Low byte for Put Char in E:/IOCB Channel 0.
 	pha       ; Push to stack
 
 OUTPUT = *+1
 	lda #$00 ; Modified at routine entry.
 
-	; This rts actually triggers calling the address of the E:
-	; device PUT CHAR routine pushed onto the stack above. 
+	; This rts actually triggers calling the address of PutCH
+	; that was pushed onto the stack above. 
 	rts  
 
 	
