@@ -11,6 +11,13 @@ Here you will find various kinds of "Hello, Whirled!" programs. (This is a close
 The excitement is overwhelming.
 
 
+  
+ATARI_BASIC -- Ye old, standard Atari BASIC using "PRINT". 
+
+ATARI_BASICXL -- OSS BASIC XL on Atari using "Print".  Note the pretty, mixed-case keywords. It really is an improvement.
+
+ATARI_BASICXL_BIGTEXT -- OSS BASIC XL on Atari.  Small change to engage the large text mode for display.  (The difference here is writing to channel #6, the S: device for screen graphics.)
+
 ATARI_ATASM_CIO_PUTBYTES -- 6502 Assembly for atasm.  Uses the official, legally sanctioned I/O method.  It uses the OS Central I/O to write the string to the screen (E: device.)
 
 ATARI_ATASM_CIO_PUTCHEAT -- 6502 Assembly for atasm.  Uses the OS Central I/O to write the characters to the screen (E: device.)  It does this using the PUT CHAR vector provided in the IOCB channel.  This cuts down the amount of IOCB setup needed, but changes the model to a less efficient iteration printing individual characters.
@@ -22,9 +29,3 @@ ATARI_ATASM_DISPLAYLIST -- 6502 Assembly for atasm.  Display "Hello, Whirled!", 
 ATARI_ATASM_DISPLAYLIST_EXTRA.asm -- 6502 Assembly for atasm.  Display "Hello, Whirled!", technically without any actual code executing.  This uses (and abuses) the Atari's executable load file to install a minimal display list showing the "Hello, Whirled" string.  It abuses the executable load file by updating the OS's shadow registers for ANTIC to install the display list.  This should run on any configuration Atari capable of loading DOS.
 
 ATARI_ATASM_SCREENRAM.asm -- 6502 Assembly for atasm.  Display "Hello, Whirled!", technically without any actual code executing.  This abuses the Atari's executable load file to write the "Hello, Whirled" string directly into screen RAM for the OS's default text display.  Since this refers to a fixed memory location it requires specific configuration -- 48K or more RAM and NO CARTRIDGE installed. 
-  
-ATARI_BASIC -- Ye old, standard Atari BASIC using "PRINT". 
-
-ATARI_BASICXL -- OSS BASIC XL on Atari using "Print".  Note the pretty, mixed-case keywords. It really is an improvement.
-
-ATARI_BASICXL_BIGTEXT -- OSS BASIC XL on Atari.  Small change to engage the large text mode for display.  (The difference here is writing to channel #6, the S: device for screen graphics.)
