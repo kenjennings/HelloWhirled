@@ -31,7 +31,7 @@ DOS_RUN_ADDR =  $02e0 ; Execute at address stored here when file loading complet
 	*=LOMEM_DOS_DUP ; Start "program" after DOS and DUP 
 
 ; --------------------------------------------------------------------
-; Yup, this is all the "program" there is. 3 bytes of JMP
+; Yup, that's all the "program" there is. 3 bytes of JMP
 
 PRG_START
 
@@ -41,8 +41,8 @@ Do_While_More_Electricity         ; Infinite loop, otherwise the
 ; --------------------------------------------------------------------
 ; The data.  The text to display and a minimal display list.
 
-HELLO_WHIRLED
-	.sbyte "HELLO, WHIRLED!" ; .sbyte is internal Atari format
+HELLO_WHIRLED ; plus one trailing blank space
+	.sbyte "HELLO, WHIRLED! " ; .sbyte is internal Atari format
 	
 DISPLAY_LIST
 	.byte $70,$70,$70,$47 ; 3 blank Lines, mode 7 text with Load Memeory Scan
