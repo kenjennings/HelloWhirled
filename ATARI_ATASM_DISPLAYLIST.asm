@@ -62,7 +62,7 @@ HELLO_WHIRLED
 
 ; --------------------------------------------------------------------
 ; Store the program start location in the Atari DOS RUN Address.
-; When DOS is done loading the executable file into memory it will 
+; When DOS is done loading the executable file into memory it will  
 ; automatically jump to the address placed here in DOS_RUN_ADDR.
 
 	*=DOS_RUN_ADDR
