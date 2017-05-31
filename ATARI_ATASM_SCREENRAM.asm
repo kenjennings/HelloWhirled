@@ -10,10 +10,10 @@
 ; populate screen RAM directly from the file.
 ; 
 ; --------------------------------------------------------------------
-; $XXXX is the starting address of the screen RAM when 
+; $BC40 is the starting address of the screen RAM when 
 ; there is 48K or more of memory and NO CARTRIDGE loaded.
 ;
-SCREEN_RAM=$BC20
+SCREEN_RAM=$BC40
 
 ; --------------------------------------------------------------------
 
