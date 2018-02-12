@@ -1,6 +1,6 @@
 # HelloWhirled
 
-Since I had to create a "hello world" repository as part of the initial tutorial, I decided to continue and provide its pitiful existence some sort of purpose.
+Since I had to create a "hello world" repository as part of the initial Github tutorial, I decided to continue and provide its pitiful existence some sort of purpose.
 
 Here you will find various kinds of "Hello, Whirled!" programs. (This is a close relative of the more advanced "Visualize Whirled Peas!" application.)
 
