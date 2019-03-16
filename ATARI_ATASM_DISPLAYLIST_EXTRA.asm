@@ -35,7 +35,7 @@ DOS_RUN_ADDR =  $02e0 ; Execute at address stored here when file loading complet
 
 PRG_START
 
-Do_While_More_Electricity         ; Infinite loop, otherwise the
+Do_While_More_Electricity             ; Infinite loop, otherwise the
 	jmp Do_While_More_Electricity ; program returns to DOS immediately.
 
 ; --------------------------------------------------------------------
@@ -45,7 +45,7 @@ HELLO_WHIRLED ; plus one trailing blank space
 	.sbyte "HELLO, WHIRLED! " ; .sbyte is internal Atari format
 	
 DISPLAY_LIST
-	.byte $70,$70,$70,$47 ; 3 blank Lines, mode 7 text with Load Memeory Scan
+	.byte $70,$70,$70,$47 ; 3 blank Lines, mode 7 text with Load Memory Scan
 	.word HELLO_WHIRLED   ; Display the text
 	.byte $41             ; Vertical Blank, then jump to...
 	.word DISPLAY_LIST    ; the start of the display list
